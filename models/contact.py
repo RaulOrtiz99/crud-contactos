@@ -5,3 +5,9 @@ class Contact(db.Model):
     fullname = db.Column(db.String(100))
     email = db.Column(db.String(100))
     phone = db.Column(db.String(100))
+
+#CONSTRUCTOR
+    def __init__(self,fullname,email,phone):
+        self.fullname=fullname
+        self.email=email
+        self.phone=phone
