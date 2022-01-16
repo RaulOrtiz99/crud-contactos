@@ -5,3 +5,17 @@
     <input type="text" name="phone"placeholder="escribe tu telefono">
     <button>Save</button>
 </form>
+
+<div>
+    {% for contact in contacts %}
+        <div>
+            <h5>{{ contact.fullname }}</h5>
+            <div></div>
+            <a href="{{ url_for('contacts.update_contacts') }}">Update</a>
+            <a href="{{ url_for('contacts.delete_contacts') }}">Delete</a>
+            <div></div>
+            <h5>{{ contact.phone }}</h5>
+            <h5>{{ contact.email }}</h5>
+        </div>
+    {% endfor %}
+</div>
